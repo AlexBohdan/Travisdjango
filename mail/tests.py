@@ -1,5 +1,5 @@
 from django.test import TestCase
-
+from django.core.mail import send_mail
 from account.models import Account
 from mail.models import Mail
 
@@ -12,3 +12,7 @@ class MailMethodTests(TestCase):
 
     def test_simple_test(self):
         self.assertEqual(5 == 5, True)
+
+    def test_send_email(self):
+        send_mail('Test', 'Test', 'from@mail.me',
+                      ['xryssteam@g,ail.com'], fail_silently=False)
