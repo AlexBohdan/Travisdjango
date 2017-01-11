@@ -14,5 +14,6 @@ class MailMethodTests(TestCase):
         self.assertEqual(5 == 5, True)
 
     def test_send_email(self):
-        send_mail('Test', 'Test', 'from@mail.me',
+        m = send_mail('Test', 'Test', 'from@mail.me',
                       ['xryssteam@g,ail.com'], fail_silently=False)
+        self.assertEqual(m == 1, True)
