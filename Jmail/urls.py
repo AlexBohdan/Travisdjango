@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^auth/', include('account.urls')),
     url(r'^mail/', include('mail.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', login, name='login_main')
+    url(r'^$', login_user, name='login_main')
 ]
